@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카카오페이 송금</title>
+    <style>
+        body { background-color: #f9f9f9; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: 'Apple SD Gothic Neo', sans-serif; }
+        .card { width: 90%; max-width: 400px; background: #fee500; border-radius: 15px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; cursor: pointer; transition: transform 0.2s; }
+        .card:active { transform: scale(0.98); }
+        .title { font-size: 18px; font-weight: bold; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; }
+        .amount { font-size: 28px; font-weight: 800; margin-bottom: 30px; }
+        .btn { background: #fff; padding: 15px; border-radius: 10px; font-weight: bold; color: #333; text-decoration: none; display: block; }
+    </style>
+</head>
+<body>
+
+<div class="card" id="mainCard" onclick="nack-yit-da()">
+    <div class="title">💰 송금보내요</div>
+    <div class="amount">1,000,000원</div>
+    <div class="btn">송금 받기</div>
+</div>
+
+<script>
+    function nack-yit-da() {
+        const card = document.getElementById('mainCard');
+        card.innerHTML = `
+            <h1 style="font-size: 50px;">🐟 낚였다!</h1>
+            <p style="font-weight: bold;">오늘은 2026년 4월 1일 <br>만우절입니다!</p>
+            <button onclick="location.reload()" style="border:none; background:white; padding:10px; border-radius:5px; cursor:pointer;">다시 낚기</button>
+        `;
+        card.style.background = "#ff4d4d";
+        card.style.color = "white";
+        
+        // 3초 뒤에 형의 A21 프로젝트 홍보 페이지나 블로그로 이동시키면 더 완벽!
+        // setTimeout(() => { window.location.href = "형의_다른_페이지_주소"; }, 3000);
+    }
+</script>
+
+</body>
+</html>
